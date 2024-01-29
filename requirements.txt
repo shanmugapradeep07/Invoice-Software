@@ -1,0 +1,8 @@
+tkinter
+jinja2
+pandas
+pdfkit
+reportlab
+tkcalendar
+openpyxl
+requests

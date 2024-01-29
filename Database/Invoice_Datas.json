@@ -1,0 +1,47 @@
+{
+   "results": [
+      {
+         "MV/23-24/1": [
+            {
+               "dress_pattern": "Blouses",
+               "piece_name": "",
+               "layer_name": "Georget",
+               "total_cost": 1201.0,
+               "layer_qnty": 1.0,
+               "layer_price": 1201,
+               "machine_hours": 0.0,
+               "machine_cost": 0,
+               "embroidery_hours": 0.0,
+               "embroidery_cost": 0,
+               "embroidery_material_cost": 0,
+               "dying_charges": 0,
+               "other_cost": 0,
+               "fixed_cost": 0,
+               "accessories": []
+            }
+         ]
+      },
+      {
+         "MV/23-24/2": [
+            {
+               "dress_pattern": "Blouses",
+               "piece_name": "",
+               "layer_name": "1st Quality Fine Mul",
+               "total_cost": 1200.0,
+               "layer_qnty": 1.0,
+               "layer_price": 1200,
+               "machine_hours": 0.0,
+               "machine_cost": 0,
+               "embroidery_hours": 0.0,
+               "embroidery_cost": 0,
+               "embroidery_material_cost": 0,
+               "dying_charges": 0,
+               "other_cost": 0,
+               "fixed_cost": 0,
+               "accessories": []
+            }
+         ]
+      }
+   ],
+   "23-24_last_bill_no": "2"
+}

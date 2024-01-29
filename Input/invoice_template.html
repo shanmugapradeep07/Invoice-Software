@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Content</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Adjust the font-family as needed */
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust as needed */
+        }
+
+        .c {
+            /* Add common styles for elements with class 'c' */
+        }
+
+        .t {
+            /* Add common styles for elements with class 't' */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <div class="c x1 y23 w3 h7">
+            <div class="t m0 xa h3 y22 ff1 fs0 fc0 sc0 ls1 ws8"><strong>Tax Invoice</strong></div>
+        </div>
+        <div class="c x1 y24 w3 h8">
+            <div class="t m0 x9 h3 y25 ff1 fs0 fc0 sc0 ls1 ws8"><strong>{{records.company_name}}</strong></div>
+        </div>
+        <div class="c x1 y26 w3 h6">
+            <div class="t m0 xb h3 y22 ff4 fs0 fc0 sc0 ls1 ws8"><em>{{records.address_line_1}}</em></div>
+        </div>
+        <div class="c x1 y27 w3 h6">
+            <div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8"><em>{{records.address_line_2}}</em></div>
+            <div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8"><strong>GSTN : {{records.gstn_no}}</strong></div>
+            <div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+            <div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+            <div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div>
+        </div>
+    </div>
+</body>
+</html>
+<table style="height: 90px; width: 97.3195%; border-collapse: collapse;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 39.8383%; height: 18px;"><strong>Customer's Details:</strong>&nbsp;</td>
+<td style="width: 23.0462%; height: 18px;"><strong>Invoice Details:</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 39.8383%; height: 18px;"><strong>Name: </strong> {{records.name}}&nbsp;</td>
+<td style="width: 23.0462%; height: 18px;"><strong>Bill No: {{records.bill_no}}</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 39.8383%; height: 18px;"><strong>State: </strong>{{records.state}}</td>
+<td style="width: 23.0462%; height: 18px;"><strong>Bill Date: </strong>{{records.bill_date}}</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 39.8383%; height: 18px;"><strong>Email ID: </strong>{{records.email_id}}</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 39.8383%; height: 18px;"><strong>Phone Number: </strong>{{records.phone_number}}</td>
+<td style="width: 23.0462%; height: 18px;"><strong>&nbsp;</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">
+<table style="height: 90px; width: 97.3195%; border-collapse: collapse;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 10.9649%; height: 18px;"><strong>S. No</strong></td>
+<td style="width: 16.8129%; height: 18px;"><strong>Particulars</strong></td>
+<td style="width: 26.2642%; height: 18px;"><strong>Amount</strong></td>
+</tr>
+{% for record in records.dress_records %}
+<tr style="height: 27px;">
+<td style="width: 10.9649%; height: 27px;">{{ record.s_no }}</td>
+<td style="width: 16.8129%; height: 27px;">{{ record.dress_pattern }}</td>
+<td style="width: 26.2642%; height: 27px;">{{ record.total_cost }}</td>
+</tr>
+ {% endfor %}
+</tbody>
+</table>
+</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">
+<table style="height: 90px; width: 97.3195%; border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<td style="width: 37.3294%;"><strong>Taxable Value&nbsp;</strong></td>
+<td style="width: 41.618%; text-align: right;">{{records.total_cost_for_client}}</td>
+</tr>
+<tr>
+<td style="width: 37.3294%;">Other Charges</td>
+<td style="width: 41.618%; text-align: right;">{{records.other_charges}}</td>
+</tr>
+<tr>
+<td style="width: 37.3294%;">Invoice Value</td>
+<td style="width: 41.618%; text-align: right;">{{records.invoice_value}}</td>
+</tr>
+<tr>
+<td style="width: 37.3294%;">Amount Receivable</td>
+<td style="width: 41.618%; text-align: right;">{{records.amount_receivable}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="t m0 x1 h3 y22 ff4 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+</div>
+<div class="c x1 y28 w3 h6">&nbsp;</div>
+<div class="c x1 y28 w3 h6">&nbsp;</div>
+<div class="c x1 y28 w3 h6">&nbsp;</div>
+<div class="c x1 y28 w3 h6">
+<div class="c x1 y21 w3 h6">
+<div class="t m0 x9 h3 y22 ff3 fs0 fc0 sc0 ls1 ws8">&nbsp;</div>
+<div class="t m0 x9 h3 y22 ff3 fs0 fc0 sc0 ls1 ws8" style="padding-left: 160px;"><em><strong>Thanks for the Order !!!</strong></em></div>
+</div>
+<div class="c x1 y23 w3 h7">&nbsp;</div>
+</div>
